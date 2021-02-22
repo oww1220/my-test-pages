@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords">
+    <meta name="description">
+    <meta name="robots" content="noindex,follow">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, target-densitydpi=medium-dpi, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="ie-stand">
+    <meta name="naver-site-verification" content="19cad6f98d713d73d31e115d86eba26a0fde2e90" />
+    <meta name="google-site-verification" content="RrySAfMd7xZnVVNeRvPdXyO6pJLarHEKTEek6-tb484" />
+    <title>신라아이파크인터넷면세점</title>
+    <link rel="apple-touch-icon-precomposed" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120X120" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png">
+    <link rel="shortcut icon" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png"
+    />
+    <link id="s2" type="text/css" rel="stylesheet" media="all" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/kr/css/common.css?bt=201801041403"
+    />
+    <link rel="stylesheet" type="text/css" media="all" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/kr/css/common_dev.css?bt=201801041403"
+    />
+    <link data-require="jasmine@*" data-semver="2.0.0" rel="stylesheet" href="http://cdn.jsdelivr.net/jasmine/2.0.0/jasmine.css"
+    />
+    <script data-require="jasmine@*" data-semver="2.0.0" src="http://cdn.jsdelivr.net/jasmine/2.0.0/jasmine.js">
+
+    </script>
+    <script data-require="jasmine@*" data-semver="2.0.0" src="http://cdn.jsdelivr.net/jasmine/2.0.0/jasmine-html.js">
+
+    </script>
+    <script data-require="jasmine@*" data-semver="2.0.0" src="http://cdn.jsdelivr.net/jasmine/2.0.0/boot.js">
+
+    </script>
+
+    <script type="text/javascript" src="https://m.shillaipark.com/estore/_ui/mobile/common/js/jquery-1.11.2.min.js"></script>
+
+
+</head>
+
+asdd
+
+
+<body>
+    
+
+    객체지향이란?<br/>
+    객체지향하면 나오는 키워드들이 있다. 추상화, 캡슐화, 상속, 다형성 등등.. 객체 지향이란 결국 코드 간에 서로 관계를 맺어줌으로써, 유기적으로 프로그램을 구성하는 것이 아닐까란 생각을 한다. 객체지향의 언어의 주요 특징은 아래와 같다.<br/><br/>
+    
+    코드의 재사용성이 높다.<br/>
+    코드의 관리가 용이하다.<br/>
+    신뢰성이 높은 프로그래밍을 가능하게 한다.<br/>
+    객체지향이란 프로그래밍을 할 때, 각자의 프로그램을 수많은 ‘객체’로 나누어 서로 상호작용을 하도록하는 일종의 프로그램 설계에 대한 방법론이라고 보는 것이 좋을 것 같다.<br/><br/>
+    
+    객체지향 5대 원칙: SOLID<br/>
+    oop란 키워드를 Google에 입력만 해도 oop solid, 추상화, 5대 원칙 등 다양한 키워드로 노출이 될 정도로 기본 중에 기본이지만, 따로 읽어보지 않으면 추상적으로만 이해하고 넘어가기 쉽다. 이 원리는 시간이 지나도 프로그래머로 하여금 유지보수에 용이하고 확장이 쉽도록 프로그래밍할 수 있도록 도와주는 도움을 주는 원칙이다. 물론 이 원칙 모든 걸 다 이해하고 있더라도 실제 원하는 바를 얻고자 하려면 끝없는 리펙토링을 거쳐야 가능할 것이다.<br/><br/>
+    
+    위키백과에 따르면 Solid는 로버트 마틴이 객체 지향 프로그래밍 및 설계의 다섯 가지 기본 원칙을 명명했다고 한다. 로버트 마틴은 우리가 잘 알고 있는 책 ‘클린 코드’의 저자로서, 여기에서 설명한 원칙들은 클린 코드 서적을 기반으로 설명하고 있으니 좀 더 깊게 공부를 하고 있으면 ‘클린 코드’ 책을 깊이 공부해도 좋을 것 같다.<br/><br/>
+    
+    SOLID의 5대 원칙은 다음과 같다.<br/><br/>
+    
+    단일 책임 원칙(Single responsibility principle) - 약어: SRP<br/>
+    개방 폐쇄 원칙(Open/closed principle) - 약어: OCP<br/>
+    리스코프 치환 원칙(Liskov substitution principle) - 약어: LSP<br/>
+    인터페이스 분리 원칙(Interface segregation principle) - 약어: ISP<br/>
+    의존관계 역전 원칙(Dependency inversion principle) - 약어: DIP<br/>
+    대략 유추할 수 있듯이 SOLID는 위의 5대 원칙의 약어의 앞 글자에서 나온 단어이다.<br/><br/>
+    
+    단일 책임 원칙(Single responsibility priciple, SRP)<br/>
+    solid 5원칙 중 S에 해당하는 키워드로, 단어 그대로 모든 Class는 하나의 책임만 가지며, 그 책임은 완전히 캡슐화되어야 함을 일컫는다. 곧 작성된 Class는 하나의 기능만 가지며, 그 Class가 제공하는 모든 서비스는 하나의 책임을 수행하는 데 집중되어야 한다는 원칙이다. 간단한 예를 들어서 회원가입 쪽의 API를 담당하는 API Core를 담당하는 Class가 있다고 가정했을 때, 그 안에는 회원가입에 해당하는 기능들만 들어가 있어야 한다. 그래서 만약 이쪽의 코드를 수정해야 한다고 한다면 그때는 회원가입 API 기능에 문제가 생겼다거나 정책이 바꼈다 등의 명확한 사유를 알 수 있을 것이다. 단일 책임은 관심사 분리와도 밀접한 관계가 있다.<br/><br/>
+    
+    만약 단일 책임 원칙을 지키지 않았을 경우에는 하나의 Class에 다양한 기능이 들어간 경우, 해당 Class를 수정했을 때 다른 모듈에 어떠한 영향을 미치는 지 그 범위을 추측하기 힘들 수 있다.<br/><br/>
+    
+    //안 좋은예<br/>
+    class UserSettings {<br/>
+      constructor(user) {<br/>
+        this.user = user;<br/>
+      }<br/>
+      <br/>
+      changeSettings(settings) {<br/>
+        if (this.verifyCredentials()) {<br/>
+          // ...<br/>
+        }<br/>
+      }<br/>
+      <br/>
+      verifyCredentials() {<br/>
+        // ...<br/>
+      }<br/>
+    }<br/>
+    위의 예제에서 UserSetting이라는 Class에서는 현재 2가지 기능을 하고 있다. User의 인증과 그 인증이 유효하면 setting을 변경할 수 있는 기능들이 있다. 위에서의 기능을 아래와 같이 분리를 한다면 Class는 각자 하나의 기능만 담당하며 수정에도 용이해진다.<br/>
+    <br/>
+    //좋은 예<br/>
+    class UserAuth {<br/>
+      constructor(user) {<br/>
+        this.user = user;<br/>
+      }<br/>
+      <br/>
+      verifyCredentials() {<br/>
+        // ...<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    class UserSettings {<br/>
+      constructor(user) {<br/>
+        this.user = user;<br/>
+        this.auth = new UserAuth(user);<br/>
+      }<br/>
+      <br/>
+      changeSettings(settings) {<br/>
+        if (this.auth.verifyCredentials()) {<br/>
+          // ...<br/>
+        }<br/>
+      }<br/>
+    }<br/>
+    개방/폐쇄 원칙(Open/Closed Principle, OCP)<br/>
+    solid 원칙 중 2번째 원칙이며, 개방폐쇄 원칙은 클래스, 모듈 함수 등의 소프트웨어 개체는 확장에 대해 열려있어야 하고, 수정에 대해서는 닫혀 있어야 한다는 프로그래밍 원칙이다. 이 는 수정이 일어나더라도 기존의 구성요소에서는 수정이 일어나지 않아야 하며, 쉽게 확장이 가능하여 재사용을 할 수 있도록 해야한다는 의미이다. 여기에서 중요한 것은 추상화와 다형성이다. 객체 지향에서 다형성이란 여러 가지 형태를 가질 수 있는 능력을 의미한다. 이 원칙을 무시한다면 유연성, 재사용성, 유지보수성 등을 얻을 수 없다라고 할 정도로 중요한 원칙이라고 볼 수 있다.<br/><br/>
+    <br/>
+    //안 좋은 예<br/>
+    class AjaxAdapter extends Adapter {<br/>
+      constructor() {<br/>
+        super();<br/>
+        this.name = 'ajaxAdapter';<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    class NodeAdapter extends Adapter {<br/>
+      constructor() {<br/>
+        super();<br/>
+        this.name = 'nodeAdapter';<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    class HttpRequester {<br/>
+      constructor(adapter) {<br/>
+        this.adapter = adapter;<br/>
+      }<br/>
+      <br/>
+      fetch(url) {<br/>
+        if (this.adapter.name === 'ajaxAdapter') {<br/>
+          return makeAjaxCall(url).then((response) => {<br/>
+            // transform response and return<br/>
+          });<br/>
+        } else if (this.adapter.name === 'httpNodeAdapter') {<br/>
+          return makeHttpCall(url).then((response) => {<br/>
+            // transform response and return<br/>
+          });<br/>
+        }<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    function makeAjaxCall(url) {<br/>
+      // request and return promise<br/>
+    }<br/>
+    <br/>
+    function makeHttpCall(url) {<br/>
+      // request and return promise<br/>
+    }<br/>
+    위의 코드는 사실 확장성이 별로 없어보인다. 이유인즉 HttpRequester Class를 보면 fetch 함수에서 if문을 이용한 분기를 타고 있다. 현재는 2개만 존재하여서 분기를 태우고 있지만, 만약 분기를 태워야하는 경우의 수가 늘어난다면 HttpRequester Class를 계속해서 수정해야할 것이다.
+    <br/>
+    class AjaxAdapter extends Adapter {<br/>
+      constructor() {<br/>
+        super();<br/>
+        this.name = 'ajaxAdapter';<br/>
+      }<br/>
+      <br/>
+      request(url) {<br/>
+        <br/>
+      }<br/>
+    }<br/>
+    <br/>
+    class NodeAdapter extends Adapter {<br/>
+      constructor() {<br/>
+        super();<br/>
+        this.name = 'nodeAdapter';<br/>
+      }<br/>
+      <br/>
+      request(url) {<br/>
+        <br/>
+      }<br/>
+    }<br/>
+    <br/>
+    class HttpRequester {<br/>
+      constructor(adapter) {<br/>
+        this.adapter = adapter;<br/>
+      }<br/>
+      <br/>
+      fetch(url) {<br/>
+        return this.adapter.request(url).then((response) => {<br/>
+          // transform response and return<br/>
+        });<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    function makeAjaxCall(url) {<br/>
+      // request and return promise<br/>
+    }<br/>
+    <br/>
+    function makeHttpCall(url) {<br/>
+      // request and return promise<br/>
+    }<br/>
+    리스코프 치환 원칙(Liskov Substitutions Principle, LSP)<br/>
+    리스코프 치환 원칙은 solid에서 L에 해당하는 원칙이다. 리스코프 치환 코드는 상속에 대한 개념으로서, wiki 백과에서는 ‘자료형 S가 자료형 T의 하위형이라면 필요한 프로그램의 속성의 변경없이 자료형 T의 객체를 자료형 S의 객체로 교체(치환) 할 수 있어야 한다.’ 라고 설명하고 있다. 쉽게 말해서 부모 Class가 들어갈 자리에 자식 Class를 넣어도 잘 구동되어야 한다 라는 원칙이다. 만약 블로그와 서적 등에서는 리스코프 치환 원칙의 예로 정사작형 클래스와 직사각형 클래스를 예로 든다. 수학적으로만 봤을 때는 직사각형은 정사각형을 포함하는 포괄적인 의미이다. 직사각형의 특징은 아래와 같다.<br/><br/>
+    
+    내각의 합은 360이며, 직사각형의 네 각은 동일하게 90도를 이룬다.<br/>
+    직사각형의 대각선은 서로 다른 대각선을 이등분한다.<br/>
+    두 쌍의 변이 각각 서로 평행한다.<br/>
+    너비는 세로변 * 가로변이다.<br/>
+    정사각형의 특징은 직사각형의 특징에 추가로 네 변의 길이가 모두 같다 라는 특징을 가진다.<br/><br/>
+    
+    내각의 합은 360이며, 직사각형의 네 각은 동일하게 90도를 이룬다.<br/>
+    직사각형의 대각선은 서로 다른 대각선을 이등분한다.<br/>
+    두 쌍의 변이 각각 서로 평행한다.<br/>
+    너비는 세로변 * 가로변이다.<br/>
+    네 변의 길이가 모두 같다.<br/>
+    직사각형이라는 큰 부모 안에 정사각형이라는 자식이 포함된다고 볼 수 있다. 그래서 수학적으만 봤을 경우에는 정사각형은 직사각형이다 라는 조건을 충족하며, 그러므로 직사각형은 정사각형의 부모 Class이다 라는 조건이 충족된다. 하지만 리스코프 치환 원칙은 이러한 원칙과는 살짝 다르다. 클린 코드에서 나온 예제를 통해 보다 편하게 표현할 수 있다.<br/><br/>
+    
+    class Rectangle {<br/>
+      constructor() {<br/>
+        this.width = 0;<br/>
+        this.height = 0;<br/>
+      }<br/>
+      <br/>
+      setColor(color) {<br/>
+        // ...<br/>
+      }<br/>
+      <br/>
+      render(area) {<br/>
+        // ...<br/>
+      }<br/>
+      <br/>
+      setWidth(width) {<br/>
+        // 가로변을 따로 설정<br/>
+        this.width = width;<br/>
+      }<br/>
+      <br/>
+      setHeight(height) {<br/>
+        // 세로변을 따로 설정<br/>
+        this.height = height;<br/>
+      }<br/>
+      <br/>
+      getArea() {<br/>
+        return this.width * this.height;<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    class Square extends Rectangle {<br/>
+      setWidth(width) {<br/>
+        //정사각형은 가로와 세로가 동일해야함으로 가로변을 구할 때 아래의 식이 성립해야함<br/>
+        this.width = width;<br/>
+        this.height = width;<br/>
+      }<br/>
+      <br/>
+      setHeight(height) {<br/>
+        //정사각형은 가로와 세로가 동일해야함으로 가로변을 구할 때 아래의 식이 성립해야함<br/>
+        this.width = height;<br/>
+        this.height = height;<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    function renderLargeRectangles(rectangles) {<br/>
+      rectangles.forEach((rectangle) => {<br/>
+        rectangle.setWidth(4);<br/>
+        rectangle.setHeight(5);<br/>
+        const area = rectangle.getArea(); // 정사각형일때 25를 리턴합니다. 하지만 20이어야 하는게 맞습니다.<br/>
+        rectangle.render(area);<br/>
+      });<br/>
+    }<br/>
+    <br/>
+    const rectangles = [new Rectangle(), new Rectangle(), new Square()];<br/>
+    renderLargeRectangles(rectangles);<br/>
+    위의 예제를 보면 Square class는 Rectangle Class로부터 상속을 받으면서도 부모의 함수 setWidth와 setHeight는 자체적으로 변경하고 있다. 하지만 LSP 원칙에는 지켜져야 할 몇가지 규칙이 있다.<br/><br/>
+    
+    서브타입은 언제나 자신의 기반타입으로 교체할 수 있어야 한다. 이말은 곧 상속받은 서브 Class에서는 그 부모의 정의한 규약(인터페이스, 메소드)을 지켜야 한다. 즉, 기반 클래스와 기반 클래스는 IS-A 관계여야 한다.<br/>
+    서브 클래스의 내부 상세를 기반 클래스는 알 필요가 없다.<br/>
+    위와 같은 코드는 리스코프 치환 원칙을 제대로 준수하지 않은 경우인데 이러한 경우 예상되는 나비 효과로는 클래스 계층이 지저분해질 수 있으며, 서브클래스 인스턴스를 파라미터로 전달했을 때 메소드가 이상하게 작동할 수 있다. 또한 슈퍼클래스에 대해 작성된 단위 테스트가 서브 클래스에서는 작동되지 않을 수 있다.<br/>
+    <br/>
+    한 블로그에서는 상속의 오용이라 하여 이와 관련된 내용을 설명하였는데, 일단 서브클래스들과 기반 클래스의 관계를 가족 관계로 봤다. 상속의 오용에 대해서 코드 재사용 욕심 때문에 가족이 아닌 객체를 비슷한 일을 한다라는 이유로 가족 관계로 묶는 것이라고 표현하며 파생 타입에 부모, 형제들과는 동떨어진 능력을 부여함으로써 돌연변이를 만드는 것이라고 했다. 그러면서 LSP는 돌연변이가 발생하지 않도록 상속 관계의 타입들이 유연하게 대처 될 수 있도록 하는 원칙이라고 표현한다.<br/><br/>
+    
+    아래의 예제가 위의 돌연변이 코드를 수정한 좋은 예이다.<br/>
+    <br/>
+    class Shape {<br/>
+      setColor(color) {<br/>
+        // ...<br/>
+      }<br/>
+      <br/>
+      render(area) {<br/>
+        // ...<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    class Rectangle extends Shape {<br/>
+      constructor(width, height) {<br/>
+        super();<br/>
+        this.width = width;<br/>
+        this.height = height;<br/>
+      }<br/>
+      <br/>
+      getArea() {<br/>
+        return this.width * this.height;<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    class Square extends Shape {<br/>
+      constructor(length) {<br/>
+        super();<br/>
+        this.length = length;<br/>
+      }<br/>
+      <br/>
+      getArea() {<br/>
+        return this.length * this.length;<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    function renderLargeShapes(shapes) {<br/>
+      shapes.forEach((shape) => {<br/>
+          const area = shape.getArea();<br/>
+          shape.render(area);<br/>
+        });<br/>
+      }<br/>
+      <br/>
+    const shapes = [new Rectangle(4, 5), new Rectangle(4, 5), new Square(5)];<br/>
+    renderLargeShapes(shapes);<br/>
+    이렇듯 LSP 법칙을 공부하며 너무 과한 코드 재사용 욕심은 오히려 더 큰 악효과를 불러온다는 것을 알 수 있었다.<br/><br/>
+    
+    인터페이스 분리 원칙(Interface Segregation Principle, ISP)<br/>
+    solid 원칙 중 I에 해당하는 원칙으로서, 클라이언트는 자신이 사용하지 않는 메소드에 의존 관계를 맺으면 안된다라는 원칙이다. 제목에서는 사실 인터페이스라는 개념이 자바스크립트에서는 존재하지 않기 때문에 이 원칙의 경우 다른 원칙들처럼 딱 맞게 적용할 수는 없다.<br/><br/>
+    
+    이 법칙에서의 핵심 과제는 큰 덩어리의 인터페이스들을 구체적이고 작은 단위들로 분리시킴으로써 꼭 필요한 메서드들만 이용할 수 있게 한다이다. 이러한 원칙을 준수하면서 기대할 효과로는 시스템의 내부 의존성 관계를 느슨하게 하여 리팩토링, 수정, 재배포를 쉽게 할 수 있도록 한다.<br/><br/>
+    
+    //안좋은예<br/>
+    class DOMTraverser {<br/>
+      constructor(settings) {<br/>
+        this.settings = settings;<br/>
+        this.setup();<br/>
+      }<br/>
+      <br/>
+      setup() {<br/>
+        this.rootNode = this.settings.rootNode;<br/>
+        this.animationModule.setup();<br/>
+      }<br/>
+      <br/>
+      traverse() {<br/>
+        // ...<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    const $ = new DOMTraverser({<br/>
+      rootNode: document.getElementsByTagName('body'),<br/>
+      animationModule() {}<br/>
+      // ...<br/>
+    });<br/>
+    위의 예제에서 보면 new DOMTraverser를 이용해 $라는 인스턴스 생성하고 있다. 여기에서 해당 인스턴스의 인자를 살펴보면 생성할 때 ‘animationModule’ 함수를 던지고 있다. 하지만 DOM 탐색시 animation을 필요로 하는 경우도 있지만, 그렇지 않은 경우도 분명이 존재할 것이다. 그럼 인스턴스를 생성할 때 일부 인스턴스에서는 사용하지도 않을 경우에도 해당 animationModule을 계속 가지고 있을 것이다. 이러한 경우에 인터페이스 분리 원칙을 어겼다 라고 규정한다.<br/><br/>
+    
+    //좋은 예<br/>
+    class DOMTraverser {<br/>
+      constructor(settings) {<br/>
+        this.settings = settings;<br/>
+        this.options = settings.options;<br/>
+        this.setup();<br/>
+      }<br/>
+      <br/>
+      setup() {<br/>
+        this.rootNode = this.settings.rootNode;<br/>
+        this.setupOptions();<br/>
+      }<br/>
+      <br/>
+      setupOptions() {<br/>
+        if (this.options.animationModule) {<br/>
+          // ...<br/>
+        }<br/>
+      }<br/>
+      <br/>
+      traverse() {<br/>
+        // ...<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    const $ = new DOMTraverser({<br/>
+      rootNode: document.getElementsByTagName('body'),<br/>
+      options: {<br/>
+        animationModule() {}<br/>
+      }<br/>
+    });<br/>
+    의존성 역전 원칙(Dependency Inversion Principle, DIP)<br/>
+    solid 원칙 중 마지막 D에 해당하는 원칙으로 이 원칙은 2가지 중요한 요소를 가지고 있다.<br/><br/>
+    
+    상위 모듈은 하위 모듈에 종속되어서는 안된다. 둘 다 추상화에 의존해야 한다.<br/>
+    추상화는 세부사항에 의존하지 않는다. 세부사항은 추상화에 의해 달라져야 한다.<br/>
+    위키백과에 따르면 OOP에서의 의존 관계 역전 원칙은 소프트웨어 모듈들을 분리하는 특정 형식을 지칭한다고 한다. 이 원칙에 따르면 상위 모듈이 하위 모듈에 의존하는 전통적인 의존 관계를 반전시킴으로써, 상위 모듈이 하위 모듈의 구현으로부터 독립되어야 한다고 한다.<br/><br/>
+    
+    이 원칙의 위반할 경우 개인적으로는 리팩토링을 하는 경우에도 그렇고, 비지니스 추가시에 굉장히 많은 제약을 가지지 않나 생각된다. 어떠한 프로젝트에서 리팩토링 혹은 기능을 추가할 때, 기존의 레거시 코드가 잘못된 것을 알면서도 수정하지 않고 그대로 두는 데에는 여러가지 이유가 있다. 레거시 코드를 수정함으로써 생길 예상치 못할 또 다른 에러에 직면할 수도 있고, 혹은 재사용을 위해 분리를 해야하는데 너무 얽키고 설켜 모듈을 뜯어낼 수 없는 경우도 있을 것이다. 이러한 원인은 여러 가지 원인들이 있을테니만 그 중 하나로는 상호 의존성이 너무 강하게 묶여서 있어서가 아닐까 싶다. 모듈 간의 의존성이 강한 경우, 하나의 모듈을 수정할 때는 그 모듈에 의존성을 가진 모든 모듈에 대해서도 변경이 일어나야 한다. 이러한 이유 때문에 하나의 모듈에 변경에도 신중할 수 밖에 없어진다. 그래서 상위 모듈과 하위 모듈은 의존을 하되 추상에 의해 의존해야 한다.<br/><br/>
+    
+    //안 좋은예<br/>
+    class InventoryRequester {<br/>
+      constructor() {<br/>
+        this.REQ_METHODS = ['HTTP'];<br/>
+      }<br/>
+      <br/>
+      requestItem(item) {<br/>
+        // ...<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    class InventoryTracker {<br/>
+      constructor(items) {<br/>
+        this.items = items;<br/>
+        this.requester = new InventoryRequester();<br/>
+      }<br/>
+      <br/>
+      requestItems() {<br/>
+        this.items.forEach(item => {<br/>
+          this.requester.requestItem(item);<br/>
+        });<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    const inventoryTracker = new InventoryTracker(['apples', 'bananas']);<br/>
+    inventoryTracker.requestItems();<br/>
+    위의 예제가 안좋은 이유는 ‘InventoryTracker’ 에서 ‘requester’에 새로운 인스턴스를 생성했는데, 그 인스턴스는 request의 method가 HTTP에 의존하도록 되어 있다. 이러한 경우에 만약 뭔가의 변경 사항이 생겨 request 의 method가 추가되어야 할 때 굉장히 난감한 경우가 생길 수 있다.<br/>
+    <br/>
+    //좋은 예<br/>
+    class InventoryTracker {<br/>
+      constructor(items, requester) {<br/>
+        this.items = items;<br/>
+        this.requester = requester;<br/>
+      }<br/>
+      <br/>
+      requestItems() {<br/>
+        this.items.forEach(item => {<br/>
+          this.requester.requestItem(item);<br/>
+        });<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    class InventoryRequesterV1 {<br/>
+      constructor() {<br/>
+        this.REQ_METHODS = ['HTTP'];<br/>
+      }<br/>
+      <br/>
+      requestItem(item) {<br/>
+        // ...<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    class InventoryRequesterV2 {<br/>
+      constructor() {<br/>
+        this.REQ_METHODS = ['WS'];<br/>
+      }<br/>
+      <br/>
+      requestItem(item) {<br/>
+        // ...<br/>
+      }<br/>
+    }<br/>
+    <br/>
+    // 의존성을 외부에서 만들어 주입해줌으로써,<br/>
+    // 요청 모듈을 새롭게 만든 웹소켓 사용 모듈로 쉽게 바꿔 끼울 수 있게 되었습니다.<br/>
+    const inventoryTracker = new InventoryTracker(['apples', 'bananas'], new InventoryRequesterV2());<br/>
+    inventoryTracker.requestItems(); <br/>
+
+
+</body>
+
+
+    
+</html>

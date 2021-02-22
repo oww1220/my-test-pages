@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords">
+<meta name="description">
+<meta name="robots" content="noindex,follow">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, target-densitydpi=medium-dpi, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="ie-stand">
+<meta name="naver-site-verification" content="19cad6f98d713d73d31e115d86eba26a0fde2e90"/>
+<meta name="google-site-verification" content="RrySAfMd7xZnVVNeRvPdXyO6pJLarHEKTEek6-tb484" />
+<title>신라아이파크인터넷면세점</title>
+<link rel="apple-touch-icon-precomposed" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png">
+<link rel="apple-touch-icon-precomposed" sizes="120X120" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png">
+<link rel="shortcut icon" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png" />
+<link type="text/css" rel="stylesheet" media="all" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/kr/css/common.css?bt=201801041403"/>
+<link rel="stylesheet" type="text/css" media="all" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/kr/css/common_dev.css?bt=201801041403" />
+
+<script type="text/javascript" src="https://m.shillaipark.com/estore/_ui/mobile/common/js/jquery-1.11.2.min.js"></script>
+
+
+</head>
+
+<body>
+
+    
+    
+<style>
+.type{max-width:640px;overflow: hidden;margin: 0 auto;background-color: aliceblue}
+.type ul{position:relative}
+.type.end ul{transition:transform 500ms linear;}
+.type ul:after{content:"";display:block;clear:both;}
+.type ul li{float:left;width:100%;}
+img{max-width:100%;}
+</style>
+
+<div>
+
+    <div class="sw type">
+        <ul>
+            <li>
+                <img src="img/1.jpg" alt="">
+                <img src="img/1.jpg" alt="">
+                <img src="img/1.jpg" alt="">
+                <img src="img/1.jpg" alt="">
+                <img src="img/1.jpg" alt="">
+                <img src="img/1.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/2.jpg" alt="">
+                <img src="img/2.jpg" alt="">
+                <img src="img/2.jpg" alt="">
+                <img src="img/2.jpg" alt="">
+                <img src="img/2.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/1.jpg" alt="">
+                <img src="img/1.jpg" alt="">
+                <img src="img/1.jpg" alt="">
+                <img src="img/1.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/2.jpg" alt="">
+                <img src="img/2.jpg" alt="">
+                <img src="img/2.jpg" alt="">
+                <img src="img/2.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+    
+    <div class="sw2 type">
+        <ul>
+            <li>
+                <img src="img/1.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/2.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/1.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/2.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+
+<img src="img/2.jpg" alt="">
+<img src="img/2.jpg" alt="">
+
+
+
+
+
+</body>
+
+<script>
+
+var swipes=(function(){
+    /*
+    var touch_start_y = 0;
+    var touch_start_x = 0;
+    var drag_dist = 0;
+    var scroll_dist = 0;
+    var save_x = 0;
+    var save_y = 0;
+    var move_dx = 0;
+    var list_Width=0;
+    var move_x=0;
+    */
+    var Swipes=function(el){
+        this.el=el;
+        this.init();
+    }
+    Swipes.prototype.init=function(){
+        this.datas={
+            imgPosition:0,
+            imgleng:this.el.find("li").length,
+            touch_start_y:0,
+            touch_start_x:0,
+            drag_dist:0,
+            scroll_dist:0,
+            save_x:0,
+            save_y:0,
+            move_dx:0,
+            list_Width:0,
+            move_x:0,
+            drags:false,
+            isTouched:true
+        }
+        this.events();
+    };
+    Swipes.prototype.events=function(){
+        //var drags=false;
+        this.datas.list_Width=this.el.width();
+        this.setWidth();
+        this.el.on("touchstart mousedown",(function(e){
+            e=e.originalEvent;
+            this.el.removeClass("end");
+            if ( e.type === 'touchstart' && e.targetTouches.length === 1 ) {
+                if (!this.datas.isTouched ) { return false; }
+                this.datas.touch_start_x = e.targetTouches[0].pageX;
+                this.datas.touch_start_y = e.targetTouches[0].pageY;
+               // console.log(touch_start_x,touch_start_y);
+            }
+            else{
+                this.datas.touch_start_x = e.pageX;
+                this.datas.touch_start_y = e.pageY;
+                this.datas.drags=true;
+            }
+            
+        }).bind(this));
+        this.el.on("touchmove",(function(e){
+            
+            e=e.originalEvent;
+
+            if ( e.type === 'touchmove' && e.targetTouches.length === 1 ) {
+                this.datas.move_x=e.targetTouches[0].pageX - this.datas.touch_start_x;
+                this.datas.scroll_dist = e.targetTouches[0].pageY - this.datas.touch_start_y; 
+                this.datas.drag_dist = this.datas.save_x+this.datas.move_x;
+                this.datas.move_dx = ( this.datas.move_x / this.datas.list_Width ) * 100;
+
+               var touchAngle = (Math.atan2(Math.abs(this.datas.scroll_dist), Math.abs(this.datas.move_x)) * 180) / Math.PI;
+
+                console.log(this.datas.drag_dist,"x:"+this.datas.move_x,"y:"+this.datas.scroll_dist,"ang:"+touchAngle,this.datas.isTouched);  
+                /*
+                if ( Math.abs( this.datas.move_x ) > Math.abs( this.datas.scroll_dist )) {
+                    this.cssMove(this.datas.drag_dist);
+                    
+                   //e.preventDefault();   
+                   return false;              
+                }  
+                */
+                if(this.datas.isTouched){
+                    if ( (90-touchAngle) > 75  || (Math.abs( this.datas.move_x )> 10 ) ) {
+                        this.cssMove(this.datas.drag_dist);
+                        this.datas.isTouched=true;
+                    //e.preventDefault();   
+                    return false;              
+                    } 
+
+                    else{
+                        this.datas.isTouched=false;
+                        //e.preventDefault();  
+                        //return true; 
+                    }    
+                }
+                   
+                      
+            }
+            
+           
+        }).bind(this));
+
+        this.el.on("touchend",(function(e){
+            e=e.originalEvent;
+            var positions=0;
+          if ( e.type === 'touchend' && e.targetTouches.length === 0 ) {
+                /*
+                if(!this.datas.isTouched){
+                    this.el.addClass("end");
+                    this.cssMove(this.datas.save_x);
+                    return true;
+                }
+                */
+                if ( Math.abs( this.datas.move_dx ) > 10 && this.datas.isTouched ) {
+                    if(this.datas.move_x>0){
+                        this.datas.imgPosition--;
+                        if(this.datas.imgPosition<0){
+                            this.datas.imgPosition=0;
+                        }
+                    }
+                    else{
+                        this.datas.imgPosition++;
+                        if(this.datas.imgPosition==this.datas.imgleng){
+                            this.datas.imgPosition=this.datas.imgleng-1;
+                        }
+                    }
+                    
+                    positions=-(this.el.find("li").eq(this.datas.imgPosition).position().left);
+                    this.datas.save_x=positions;
+                    this.el.addClass("end");
+                    this.cssMove(positions);
+                    // ... move slide element to Next or Prev slide
+                } else {
+                    this.el.addClass("end");
+                    this.cssMove(this.datas.save_x);
+                    requestAnimationFrame((function(){
+                        this.datas.isTouched=true;
+                    }).bind(this));                
+                   // ... move slide element to save_x or save_y position
+                }
+                console.log(this.datas.imgPosition,this.datas.save_x);
+                this.datas.touch_start_y = 0;
+                this.datas.touch_start_x = 0;
+                this.datas.drag_dist = 0;
+                this.datas.scroll_dist = 0;
+                this.datas.move_dx = 0;
+                this.datas.move_x=0;
+
+                this.datas.drags=false;
+               // e.preventDefault();
+                return true;
+            }
+        }).bind(this));
+        /*
+        $(window).on("scroll",(function(e){
+            this.datas.isTouched=false;
+           // e.preventDefault();
+        }).bind(this));
+        */
+        $(window).on("mousemove",(function(e){
+            e=e.originalEvent;
+
+            if(this.datas.drags){
+                this.datas.move_x=e.pageX - this.datas.touch_start_x;
+                this.datas.scroll_dist = e.pageY - this.datas.touch_start_y;
+                this.datas.drag_dist = this.datas.save_x+this.datas.move_x;
+                this.datas.move_dx = ( this.datas.move_x / this.datas.list_Width ) * 100;
+
+                if ( Math.abs( this.datas.move_x ) > Math.abs( this.datas.scroll_dist )) {
+                    this.cssMove(this.datas.drag_dist);
+                    console.log(this.datas.drag_dist,this.datas.move_x,this.datas.scroll_dist);                 
+                }
+            }
+            else{
+                return;
+            }              
+
+            
+            e.preventDefault();
+        }).bind(this));
+    
+
+        $(window).on("mouseup",(function(e){
+            e=e.originalEvent;
+            var positions=0;
+           // if ( e.type === 'touchend' && e.targetTouches.length === 0 ) {
+                
+                if ( Math.abs( this.datas.move_dx ) > 40 ) {
+                    if(this.datas.move_x>0){
+                        this.datas.imgPosition--;
+                        if(this.datas.imgPosition<0){
+                            this.datas.imgPosition=0;
+                        }
+                    }
+                    else{
+                        this.datas.imgPosition++;
+                        if(this.datas.imgPosition==this.datas.imgleng){
+                            this.datas.imgPosition=this.datas.imgleng-1;
+                        }
+                    }
+                    
+                    positions=-(this.el.find("li").eq(this.datas.imgPosition).position().left);
+                    this.datas.save_x=positions;
+                    this.el.addClass("end");
+                    this.cssMove(positions);
+                    // ... move slide element to Next or Prev slide
+                } else {
+                    this.el.addClass("end");
+                    this.cssMove(this.datas.save_x);
+                    // ... move slide element to save_x or save_y position
+                }
+                console.log(this.datas.imgPosition,this.datas.save_x);
+                this.datas.touch_start_y = 0;
+                this.datas.touch_start_x = 0;
+                this.datas.drag_dist = 0;
+                this.datas.scroll_dist = 0;
+                this.datas.move_dx = 0;
+                this.datas.move_x=0;
+
+                this.datas.drags=false;
+                e.preventDefault();
+                
+            //}
+        }).bind(this));
+        $(window).on("resize",function(){
+            this.setWidth();
+        }.bind(this));
+    };
+    Swipes.prototype.cssMove=function(drag_dist){
+        var transformStyle = 'translate3d('+drag_dist+'px,0px,0px)';
+        this.el.find("ul").get(0).style.transform = transformStyle;
+        console.log(transformStyle);
+    };
+    Swipes.prototype.setWidth=function(){
+        var leng=this.el.find("li").length;
+        var li=this.el.width();
+        var wid=Math.ceil(leng*li);
+        this.el.find("ul").css({width:wid});
+        this.el.find("li").css({width:li});
+    }
+    
+
+
+    return Swipes;
+})();
+
+
+var swipesObj=new swipes($(".sw"));
+
+var swipesObj2=new swipes($(".sw2"));
+
+
+const getId = cb => {
+  setTimeout(() => cb(1), 1)
+};
+const getNameById = (id, cb) => {
+  setTimeout(() => cb('chris'), 1000)
+};
+
+const logs = log => {console.log(log)};
+
+getId(id => {
+  getNameById(id, (name => {
+    console.log({id, name})
+  }));
+});
+
+logs("sasa");
+
+
+
+
+/*
+
+;(function($,window) {
+    var Slides = window.Slides || {};
+
+    Slides=(function(){
+        var Slides=function(elm,option){
+            this.elm=$(elm);
+            this.option=$.extend({},this.defalt,option);
+
+            this.init();
+        }
+        return Slides;
+    })();
+
+    Slides.prototype={
+        constructor:Slides,
+        defalt:{
+            num:"1"
+        },
+        init:function(){
+            this.setEvent();
+            console.log(this);
+        },
+        setWidth:function(){
+
+            var leng=this.elm.find("li").length;
+            var li=this.elm.width();
+            var wid=Math.ceil(leng*li);
+            this.elm.find("ul").css({width:wid});
+            this.elm.find("li").css({width:li});
+
+        },
+        setEvent:function(){
+            this.setWidth();
+            $(window).on("resize",function(){
+                this.setWidth();
+            }.bind(this));
+        }
+    }
+
+    $.fn.slides = function() {
+        var _ = this,
+            opt = arguments[0],
+            args = Array.prototype.slice.call(arguments, 1),
+            l = _.length,
+            i,
+            ret;
+           
+        for (i = 0; i < l; i++) {
+            //처음 인스턴스 생성 용
+            if (typeof opt == "object" || typeof opt == "undefined") {
+                _[i].slides = new Slides(_[i], opt);
+                
+            }
+            //메소드 용
+            else {
+                ret = _[i].slides[opt].apply(_[i].slides, args);
+                
+            }
+            
+            if (typeof ret != "undefined") return ret;
+        }
+        return _;
+    };
+
+})(jQuery,window);
+
+$(function(){
+
+    $(".sw").slides({
+        not:2
+    });
+
+
+
+});
+*/
+
+</script>
+
+</html>

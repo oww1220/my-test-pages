@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="keywords">
+<meta name="description">
+<meta name="robots" content="noindex,follow">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, target-densitydpi=medium-dpi, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="ie-stand">
+<meta name="naver-site-verification" content="19cad6f98d713d73d31e115d86eba26a0fde2e90"/>
+<meta name="google-site-verification" content="RrySAfMd7xZnVVNeRvPdXyO6pJLarHEKTEek6-tb484" />
+<title>신라아이파크인터넷면세점</title>
+<link rel="apple-touch-icon-precomposed" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png">
+<link rel="apple-touch-icon-precomposed" sizes="120X120" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png">
+<link rel="shortcut icon" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png" />
+<link type="text/css" rel="stylesheet" media="all" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/kr/css/common.css?bt=201801041403"/>
+<link rel="stylesheet" type="text/css" media="all" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/kr/css/common_dev.css?bt=201801041403" />
+
+<!--script type="text/javascript" src="https://m.shillaipark.com/estore/_ui/mobile/common/js/jquery-1.11.2.min.js"></script-->
+
+
+</head>
+
+<style>
+    .wrap {margin-left:50px;}
+    .wrap > li {margin-bottom:30px;}
+    .wrap > li::before {content:"○";font-size:11px;display:inline-block;margin-right:10px;}
+    .wrap li ul {padding-left:40px;}
+    .wrap li ul li::before {content:"■";font-size:11px;display:inline-block;margin-right:10px;}
+    .xe_content h1 {font-size:24px;}
+    .xe_content h2 {font-size:20px;}
+    .xe_content p {margin:16px 0;}
+</style>
+
+<body>
+
+    <p>용어</p>
+    <ul class="wrap">
+    <li>Commit
+    <ul>
+    <li>커밋을 하는 행위가 HEAD에 반영한다는 뜻</li>
+    <li>파일 or 폴더의 변경사항 저장.</li>
+    <li>영문/숫자로 이루어진 40자리 고유이름을 가진다.</li>
+    <li>커밋 메세지 (Git 권장)
+    <ul>
+    <li>line 1: 변경내역 요약</li>
+    <li>line 2: 공란</li>
+    <li>line 3: 변경이유</li>
+    </ul>
+    </li>
+    <li><code>git commit --ammend</code> 가장 최근 커밋내용에 내용 수정 (설명뿐만 아니라, <strong>파일도 추가/수정</strong> 가능하다.)</li>
+    <li><code>git checkout -- &lt;파일명&gt;</code> 로컬의 변경내용을 변경 전 HEAD로 되돌림추가한 내용과 변경내용은 남아있음.(commit만 안한 상태)</li>
+    </ul>
+    </li>
+    <li>Stage (=Index)
+    <ul>
+    <li>commit한 이후 push는 안한 상태</li>
+    <li>등록되지 않은 파일은 commit 되지 않는다.</li>
+    </ul>
+    </li>
+    <li>Checkout
+    <ul>
+    <li>사용법
+    <ul>
+    <li><code>git checkout &lt;브랜치명&gt;/&lt;태크명&gt;</code></li>
+    <li><code>git checokut -b &lt;새브랜치&gt; &lt;기존브랜치&gt;</code> 새로운 브랜치를 만들면서 입장합니다.</li>
+    </ul>
+    </li>
+    <li>해당 브랜치 입장</li>
+    <li><code>git checkout --</code> 커밋전 파일의 변경내용을 취소하고 이전 커밋으로 되돌림</li>
+    </ul>
+    </li>
+    <li>HEAD
+    <ul>
+    <li>현재 사용주인 Branch 의 선두부분</li>
+    <li>이동
+    <ul>
+    <li>HEAD를 이동하면 Branch가 변경</li>
+    <li>^ or ~1 or ~ : 바로 이전 상태로</li>
+    <li>^^ or 2: 2단계 앞으로</li>
+    </ul>
+    </li>
+    <li><code>git reset HEAD --</code> 커밋된 파일들을 취소</li>
+    </ul>
+    </li>
+    <li>Stash
+    <ul>
+    <li>파일의 변경 내용을 일시적으로 기록해두는 영역</li>
+    <li>Commit 보류</li>
+    <li>나중에 다시 불러와서 branch에 commit 할 수 있음</li>
+    </ul>
+    </li>
+    <li>Branch
+    <ul>
+    <li>사용법
+    <ul>
+    <li><code>git branch bugFix</code> (만들고) / <code>git checkout bugFix</code> (bugFix로 갈아탐)</li>
+    <li><code>git checkout -b bugFix</code> bugfix 브랜치를 만들고 갈아탐`</li>
+    <li><code>git checkout -b release-0.90 development</code> evelopment 브랜치로부터 만듦`</li>
+    <li><code>git branch -m &lt;기존브랜치&gt; &lt;새로운브랜치&gt;</code> 기존브랜치를 새로운 브랜치로 변경합니다. -M 옵션을 사용하면 이미 있는 브랜치라도 덮어씁니다.</li>
+    </ul>
+    </li>
+    <li>통합 브랜치: Master Branch</li>
+    <li>토픽 브랜치: Feater Branch</li>
+    <li><a href="http://nvie.com/posts/a-successful-git-branching-model/" title="성공적인 Git 브랜칭 모델" rel="nofollow">성공적인 Git 브랜칭 모델</a>
+    <ul>
+    <li>Main Branch (master, develop)</li>
+    <li>Feature or Topic Branch (develop-featcher)</li>
+    <li>Release Branch (develop - release(bugfix) - mastert순)</li>
+    <li>Hotfix Branch (master-hotfix 긴급수정)</li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li>통합
+    <ul>
+    <li>Merge
+    <ul>
+    <li>사용법
+    <ul>
+    <li><code>git merge &lt;브랜치&gt;</code> &lt;브랜치&gt;를 현재 브랜치로 합침.</li>
+    <li><code>git checkout master</code></li>
+    <li><code>git merge --no-ff release-0.9.0</code> release 브랜치를 merge. no-ff는 히스토리를 명시적으로 만듦</li>
+    </ul>
+    </li>
+    <li>FF(Fast Forward) Merge: 분기된 branch만 변경사항이 있을때
+    <ul>
+    <li>ex. Master -&gt; BugFix -&gt; Master</li>
+    <li>non fast-forward 옵션 : bugFix branch가 그대로 남기 때문에 관리상 유용</li>
+    </ul>
+    </li>
+    <li>Merge Commit : 양쪽의 변경을 가져와서 수정후 Commit</li>
+    <li>Merge 단점: 변경사항이 그대로 남아있기때문에 이력이 복잡해짐.</li>
+    <li>토픽브랜치에 통합 브랜치의 최근 코드를 적용할 경우 무슨 코드들이 바뀌었는지 확인할 필요가 있기 때문에 rebase 사용.</li>
+    <li>ex) <code>git checkout master</code> <code>git merge hotfix</code> : Host가 통합 브랜치이다.</li>
+    <li><code>git merge --squash</code>
+    <ul>
+    <li>해당 브랜치의 커밋 전체를 통합한 커밋 추가</li>
+    <li>토픽브랜치 안의 커밋을 한꺼번에 모아 통합 브랜치에 병합할때 사용</li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li>Rebase
+    <ul>
+    <li>사용법
+    <ul>
+    <li><code>git rebase &lt;브랜치&gt;</code> &lt;브랜치&gt;를 현재 브랜치에 적용합니다.</li>
+    </ul>
+    </li>
+    <li>이력은 단순해지지만, 토픽 브랜치의 commit 이력이 변경됨.</li>
+    <li>토픽 브랜치가 그대로 통합 브랜치의 끝(HEAD)에 얹혀지는 스타일.</li>
+    <li>각각의 commit에서 충돌내용을 수정할 필요가 있음.</li>
+    <li>통합 브랜치의 HEAD(위치)는 이전 상태로 그대로 있으니 bugFix Branch와 FF Merge를 해서 옮겨주어야 한다.</li>
+    <li>ex) 통합 브랙치에 토픽 브랜치를 불러올 경우 rebase 한뒤 merge</li>
+    <li>ex) git checkout issue3 / git rebase master : merge와 달리 Host가 토픽브랜치이다.</li>
+    <li>충돌시 취소하려면 git rebase --abort</li>
+    <li>git rebase -i
+    <ul>
+    <li>특정 커밋을 다시 쓰거나 다른 커밋과 바꾸기. 특정 위치 커밋 삭제나 여러 커밋을 하나로 통합도 가능.</li>
+    <li><code>git rebase -i HEAD~5</code>
+    <ul>
+    <li>s(squash)는 이전 커밋과 병합</li>
+    </ul>
+    </li>
+    <li>용도
+    <ul>
+    <li>push 하기 전에 커밋내용 정리</li>
+    <li>이전 커밋에 누락된 파일 추가</li>
+    <li>알기 쉽게 그룹으로 통합</li>
+    </ul>
+    </li>
+    <li>취소
+    <ul>
+    <li><code>git reflog</code></li>
+    <li><code>git reset --hard HEAD@{N}</code></li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li>Pull
+    <ul>
+    <li>가져오기 and 병합하기</li>
+    <li>내부적으로 Fetch + Merge</li>
+    </ul>
+    </li>
+    <li>Fetch
+    <ul>
+    <li>가져오기</li>
+    <li>원격저장소(origin)의 내용 확인만 하기</li>
+    <li>이름없는 브랜치로 가져옴. git checkout FETCH_HEAD 로 체크아웃 가능</li>
+    </ul>
+    </li>
+    <li>Push
+    <ul>
+    <li>밀어넣기</li>
+    </ul>
+    </li>
+    <li>Tag
+    <ul>
+    <li>일반 태그 (Lightweight Tag) - 이름정보만
+    <ul>
+    <li><code>git tag &lt;tag-name&gt;</code></li>
+    </ul>
+    </li>
+    <li>주석 태그 (Anootated Tag) - 상세정보 포함
+    <ul>
+    <li><code>git tag -a &lt;tag-name&gt;</code></li>
+    <li><code>git tag -am &lt;comment&gt; &lt;tag-name&gt;</code></li>
+    </ul>
+    </li>
+    <li><code>git tag</code> 태그목록</li>
+    <li><code>git tag -n</code> 태그목록과 주석내용</li>
+    <li><code>git tag -n &lt;tag-name&gt;</code> 태그삭제</li>
+    <li><code>git checkout &lt;tag-name&gt;</code> 바로 특정상태로 되돌리기</li>
+    </ul>
+    </li>
+    <li>Remote
+    <ul>
+    <li>사용법
+    <ul>
+    <li><code>git remote add origin &lt;원격저장소 주소&gt;</code> 원격저장소 주소 등록</li>
+    <li><code>git push orgin master</code> 원격저장소 브랜치로 밀어냄.</li>
+    <li><code>git pull</code> 원격 저장소에 맞춰 갱신. 내부적으로 fetch후 merge</li>
+    <li>초기화
+    <ul>
+    <li><code>git fetch origin</code></li>
+    <li><code>git reset --hard origin/master</code></li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li>Diff
+    <ul>
+    <li>병합 충돌(conflicts)시 직접 수정후</li>
+    <li><code>git diff &lt;원래 브랜치&gt; &lt;비교대상 브랜치&gt;</code></li>
+    </ul>
+    </li>
+    <li>Revert
+    <ul>
+    <li>특정 커밋내용 삭제</li>
+    <li>내부적으로 실제 삭제 하는게 아니라, 해당 커밋의 삭제 커밋을 새로 만들어 안전하게 처리</li>
+    </ul>
+    </li>
+    <li>Reset
+    <ul>
+    <li>커밋만 되돌리고 싶을때 --soft</li>
+    <li>변경한 인덱스의 상태를 원래대로 되돌리고 싶을때 --mixed</li>
+    <li>최근의 커밋을 완전히 버리고 이전상태로 복구 --hard</li>
+    <li>실수로 reset 했을경우
+    <ul>
+    <li><code>git reset --hard ORIG_HEAD</code></li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li>Cherry-pick
+    <ul>
+    <li>다른 브랜치의 특정 커밋을 복사하여 현재 브랜치로 가져옴</li>
+    <li><code>git cheery-pick e4ec</code></li>
+    </ul>
+    </li>
+    <li>Log
+    <ul>
+    <li>기본적으로 log가 아니라 식별자 알아보기</li>
+    <li><code>git log --decorate</code> 태그정보를 포함한 이력을 확인</li>
+    <li>-1이나 -2의 옵션을 출력 로그의 갯수를 지정할수 있음</li>
+    </ul>
+    </li>
+    <li>Reflog - HEAD의 이동 내역</li>
+    <li>Clean - 관리대상이 아닌 파일 삭제</li>
+    <li>Tip
+    <ul>
+    <li>git reset --hard HEAD~ : commit 취소</li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    </ul>  
+
+
+    <div class="document_22218_4 xe_content"><p>병합과 재정렬은 대개 한 Topic(작업 단위)의 작업이 끝난 다음, 작업 내용을 Master branch에 반영해야 할 경우 수행하는 작업입니다.<br></p>
+        <p>새로운 Topic에 대한 작업을 할 때는 대개 Master Branch에서 새로운 Branch를 따서 작업한 뒤, 나중에 다시 Master Branch에 합치는 순으로 작업을 진행합니다.<br></p>
+        <p>병합과 재정렬에 대한 이해는 GIT으로 작업하기 위해 PM 뿐만 아니라 팀원도 알고 있어야 합니다. 병합과 재정렬에 관련된 작업 흐름을 어느 정도 이해하고 있어야 불필요한 추가 작업을 막을 수 있고, '이렇게 해도 되는데 왜 꼭 이렇게 하라고 하는거지?'라는 불만을 갖지 않게 될테니까요.^-^<br></p>
+        <p><br></p>
+        <h1>특정 Commit을 선택해서 반영하기 - cherry-pick<br></h1><p>다른 Branch에 있는 Commit을 선별적으로 현재 Branch에 반영하기 위한 명령어입니다. Cherry-pick이라는 이름에서 뭐에 쓰는 건지 예측이 될 것입니다.</p>
+        <p>체리 나무에 달려 있는 체리를 하나씩 골라 따듯이, 커밋들이 달려 있는 커밋 나무(?)에서 필요한 커밋들을 하나씩 선별해서 가져 오기 위한 명령어가 바로 cherry-pick입니다.<br></p>
+        <pre class="brush:plain;gutter:false" title="">git cherry-pick {Commit ID}</pre><p>이 때, 현재 Branch는 작업 내역을 반영할 Branch(대개 Master)여야 하고, 가져오려는 Commit이 여러개인 경우 먼저 작성한 Commit부터 순서대로 가져와야 합니다.<br></p>
+        <p>Cherry-pick은 엄연히 말하면 Commit을 가져 오는 것이 아니라, 가져올 Commit과 같은 Commit을 새로 만들어서 현재 Branch에 덧붙이는 작업입니다. 즉, 현재 Branch에 붙는 Commit은 <u>Commit ID가 달라집니다.</u><br></p>
+        <p>왜냐하면 A를 X로 바꾸는 Commit과 B를 X로 바꾸는 Commit은 작업 내용이 서로 다른 Commit이기 때문입니다. 설명이 복잡해 졌는데, 이해가 잘 안간다면 다음 한 문장만 기억해 두면 됩니다.</p>
+        <p align="center"><span style="color: rgb(255, 108, 0);">'Cherry-pick은 Commit을 새로 하는 것과 같다.'</span></p>
+        <p align="left"><br></p>
+        <h1>여러 개의 Commit을 반영하기 - rebase<br></h1><p>Rebase는 Cherry-pick과 유사하지만, 여러 개의 Commit을 동시에 다룰 수 있습니다. 즉, Cherry-pick으로 하는 작업은 Rebase 명령어로도 할 수 있습니다. 다만, Rebase는 여러 개의 Commit을 하나로 합치거나, 특정 Commit을 건너 뛰는 등 보다 복잡한 작업을 수행할 수 있습니다.<br></p>
+        <p><br></p>
+        <h2>여러 개의 Commit을 순서대로 가져와서 반영하기</h2><p>대상 Branch의 변경 사항을 모두 가져와서 현재 Branch에 반영하려 할 때 다음과 같은 명령어를 사용합니다. <br></p>
+        <p>즉, 현재 Branch와 대상 Branch의 공통 조상부터 대상 Branch의 마지막 Commit까지의 모든 Commit을 순서대로 하나씩 가져와서 현재 Branch에 덧붙입니다.</p>
+        <pre class="brush:plain;gutter:false" title="">git rebase {가져올 Branch 이름}</pre><p>결과적으로, 대상 Branch는 변경되지 않고 현재 Branch에만 새로운 Commit이 생성되어 덧붙여집니다.<br></p>
+        <p><br></p>
+        <h2>Commit의 순서를 재정렬하고 첨삭하기<br></h2><p>Rebase 명령에 -i(interactive) 옵션을 덧붙여 사용하면 Commit들의 순서를 바꾸고 첨삭하거나, 몇 개의 Commit을 하나로 합치는 등의 작업을 수행한 뒤 가져올 수 있습니다.</p>
+        <p>Rebase 명령과 -i 옵션의 조합은 '리베이시'라고도 불리우며, 병합 작업 뿐만 아니라 현재 Branch에서 최근에 작업한 몇 개의 Commit들을 편집하고자 할 때도 유용하게 사용할 수 있습니다.<br></p>
+        <p>예를 들어, 다음과 같이 입력하면 현재 Branch의 HEAD로부터 3개의 Commit들을 편집할 수 있습니다.<br>
+        </p>
+        <pre class="brush:plain;gutter:false" title="">git rebase -i HEAD~3</pre><p>이 때, Rebase 작업 이후 Commit들은 Cherry-pick과 마찬가지로 모두 ID가 바뀝니다.</p>
+        <p>쉽게 생각해서 위 명령은 HEAD로부터 3개의 Commit들을 현재 Branch에서 모두 '들어낸 뒤', 순서를 바꾸거나 합치는 등의 작업을 하고 다시 하나씩 새로 Commit하는 것입니다.<br></p>
+        <p>'리베이시' 명령은 개발을 진행하면서 은근히 많이 사용되므로 눈여겨 보는 것이 좋습니다. 특히 위에서 예로 든 명령의 경우 심심치 않게 자주 사용하게 될 것입니다.<br></p>
+        <p><br></p>
+        <h1>두 개의 Branch를 하나로 합치기 - Merge<br></h1><p><br></p>
+        <h2>3-Way Merge<br></h2><p>3-Way Merge란 하나의 Branch를 다른 Branch에 합치는 작업을 의미합니다. 엄연히 말하면 부모 Commit이 둘 이상인 새로운 Commit을 만들어서 현재 Branch에 덧붙이는 작업입니다.<br></p>
+        <pre class="brush:plain;gutter:false" title="">git merge --no-ff {합칠 Branch 이름}</pre><p>옵션으로 넣은 --no-ff 는 Fast-forward Merge가 가능하더라도, 무조건 3-Way Merge를 수행하라는 의미입니다.<br></p>
+        <p>3-Way Merge 작업을 수행하고 나면 합칠 Branch에서 가져온 Commit이 몇 개 였던지 간에 현재 Branch에는 딱 하나의 Commit만 새로 생성됩니다. 따라서, Merge를 취소하고 싶다면 새로 생성된 Commit만 삭제해 주면 됩니다.</p>
+        <p><br></p>
+        <h2>Fast-forward Merge<br></h2><p>Fast-forward Merge는 합칠 Branch가 현재 Branch와 분기된 이후, 현재 Branch에 새로 생성된 Commit이 없을 경우 현재 Branch를 가리키는 HEAD를 합칠 Branch의 마지막 Commit으로 옮김으로써 Merge를 수행하는 방법입니다.</p>
+        <p>뭔가 복잡한 설명이 되었는데요, 그림을 보면서 설명해 드리도록 하겠습니다.</p>
+        <p align="center"><img src="https://www.tuwlab.com/files/attach/images/2382/218/022/6ed11d0791c7f8efd0fd2018b0968437.png" alt="ff-merge.png" width="698" height="494" style="width: 698px; height: 494px;"><br>( 그림 출처: http://www.deferredprocrastination.co.uk/blog/2012/git-un-merge/ )</p>
+        <p>왼쪽 그림은 Commit B의 위치에서 develop branch를 새로 만든 뒤, 이후 develop branch에서 C, D, E의 세 개 Commit을 작성한 상황을 나타내고 있습니다.</p>
+        <p>develop branch에서 세 개의 Commit을 새로 작성하는 동안, master branch에는 새로운 Commit이 하나도 추가되지 않았습니다. 이 상황이 바로 Fast-forward Merge가 가능한 상황입니다.</p>
+        <p>여기에서 Fast-forward Merge를 수행하면 3-Way Merge처럼 두 개의 조상을 갖는 새로운 Commit을 만들어서 master에 덧붙이는 것이 아닌, master branch를 가리키는 Commit Pointer를 E Commit으로 옮기는 것으로 Merge를 끝마치게 됩니다.</p>
+        <p>즉, 결과적으로 Master branch에서 C, D, E Commit을 새로 작성하고 E commit에 develop이라는 새로운 이름을 붙여 준 것과 같아집니다.<br></p>
+        <p>Fast-forward Merge는 수행 속도가 빠르고 불필요한 Branch를 없애 주는 역할을 하지만, 두 개의 branch의 구분이 사라지기 때문에 프로젝트 관리 면에서 모호함이 발생할 수 있습니다. <span style="color: rgb(154, 154, 154);">(위 그림을 보면 master branch와 develop branch의 </span><span style="color: rgb(154, 154, 154);">구분이 사라졌음을 알 수 있습니<span style="color: rgb(154, 154, 154);">다.</span></span><span style="color: rgb(154, 154, 154);">)</span></p>
+        <pre class="brush:plain;gutter:false" title="">git merge {합칠 Branch 이름}</pre><p>Merge 명령에 별도의 옵션을 주지 않으면 기본적으로 Fast-forward Merge를 수행합니다. 단, Fast-forward Merge가 불가능한 조건일 경우 3-Way Merge를 수행합니다.<br></p>
+        <p>경우에 따라서 작업 기록을 남겨 두기 위해 Fast-forward Merge를 수행하지 말아야 될 경우가 있습니다. 이 경우 --no-ff 옵션을 주어서 3-Way Merge를 수행하면 됩니다.<br></p>
+        <p><br></p>
+        <h1>Rebase VS Merge<br></h1><p>Rebase와 Merge 모두 새로운 작업 내용을 Master branch와 합치는 데 사용할 수 있는 유용한 명령어입니다. 다만, 이 둘을 각각 언제 사용해야 할 지 잘 모르겠다면 다음 문장을 기억하고 있으면 됩니다.<br></p>
+        <p align="center"><span style="color: rgb(255, 108, 0);">'Merge는 Commit ID가 보존되고, Rebase는 새로운 Commit이 생성되므로 Commit ID가 바뀐다.'</span><br></p>
+        <p>그래도 잘 모르겠다면 PM에게 물어보면 됩니다. PM이 작업을 진행하는 스타일에 따라서 작업 내용을 Main stream branch에 반영할 때 Merge를 사용할 지, Rebase를 사용할지 달라지기 때문입니다.</p>
+        <p>GIT에 처음 입문하면 Commit ID가 달라지던 말던 작업 내용이 잘 반영되면 그만이지, 뭐가 중요하냐고 생각할 수도 있습니다. 하지만, 프로젝트의 규모가 커지면 이야기가 달라집니다.<br></p>
+        <p>원격 저장소에는 가급적 같은 작업을 수행한 Commit이 두 개 이상 존재하지 않도록 유지해야 합니다. 같은 작업 내용을 갖는 Commit이 두 개 이상 존재하면 지저분해지고, 프로젝트 관리상 좋지 않기 때문입니다.<br></p>
+        <p>역사가 오랜(?) 오픈소스 작업을 할 때는 Commit Log에 작업을 위한 정보가 담겨 있는 경우가 많고, 따라서 오랜 옛날의 Commit Log를 뒤져야 하는 경우가 많습니다. 이럴 때 같은 작업을 수행한 Commit이 둘 이상이라면 그것들을 모두 살펴봐야 하는 불상사가 발생합니다.<br></p>
+        <p>일반적으로, 로컬 저장소에서 병합하고 Push하는지, 혹은 작업 Branch를 Push하고 병합하는지에 따라 무엇을 사용할지가 결정됩니다.</p>
+        <p>핵심은 같은 작업을 하는 Commit이 둘 이상 발생하지 않도록 하는 것이므로, 다음과 같이 구분해서 사용하면 됩니다.</p>
+        <p><strong><span style="color: rgb(0, 0, 255);">Rebase</span></strong></p>
+        <p>로컬 저장소에서 작업을 위해 개인적으로 만든 Branch를 Main stream branch에 반영하여 Push 하기 위해 사용합니다. 로컬에 개인적으로 만든 Branch는 Push 이후 정리를 하면서 대개 삭제합니다. 대개 Hotfix와 같이 단기간에 끝나는 Topic의 경우 이 방법으로 작업합니다.<br></p>
+        <p><strong><span style="color: rgb(0, 0, 255);">Merge</span></strong></p>
+        <p>로컬 저장소에서 분기하고 작업한 Branch를 리뷰 등을 위해 원격 저장소에서 Push한 뒤, Review가 끝나고 PM이 Main stream branch에 병합하는 순서로 작업을 진행할 때 사용합니다. Branch가 그대로 유지되기 때문에 나중에 추가 작업을 해야 할 경우나, 큰 규모의 Topic인 경우 이 방법으로 작업합니다.<br></p>
+        <p><br></p></div>
+
+
+
+
+
+
+</body>
+
+
+
+</html>

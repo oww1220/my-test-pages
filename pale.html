@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords">
+<meta name="description">
+<meta name="robots" content="noindex,follow">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, target-densitydpi=medium-dpi, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="ie-stand">
+<meta name="naver-site-verification" content="19cad6f98d713d73d31e115d86eba26a0fde2e90"/>
+<meta name="google-site-verification" content="RrySAfMd7xZnVVNeRvPdXyO6pJLarHEKTEek6-tb484" />
+<title>신라아이파크인터넷면세점</title>
+<link rel="apple-touch-icon-precomposed" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png">
+<link rel="apple-touch-icon-precomposed" sizes="120X120" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png">
+<link rel="shortcut icon" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png" />
+<link type="text/css" rel="stylesheet" media="all" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/kr/css/common.css?bt=201801041403"/>
+<link rel="stylesheet" type="text/css" media="all" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/kr/css/common_dev.css?bt=201801041403" />
+
+<script type="text/javascript" src="https://m.shillaipark.com/estore/_ui/mobile/common/js/jquery-1.11.2.min.js"></script>
+
+
+</head>
+
+<body>
+
+    
+    
+<style>
+.col-wrap {background: url("./img/bg11.png") no-repeat center top;background-attachment: fixed;background-size: 100%;}
+.scroll-active {}
+.col-wrap .col2 {background: url("./img/bg2.png") no-repeat center top aqua;background-attachment: fixed;background-size: 100%;}
+.col-wrap .col3 {background: url("./img/bg3.png") no-repeat center top aquamarine;background-attachment: fixed;background-size: 100%;}
+.col-wrap .col4 {background-color: antiquewhite}
+.col-wrap > div {height: 380px;color:#fff;}
+.col-wrap > div .in {width: 900px;margin: 0 auto;text-align: center;}
+</style>
+
+<div>
+
+
+<div class="col-wrap">
+    <div class=" col1">1</div>
+    <div class="scroll-active col2"><div class="in" style="height: 500px;">111111111</div></div>
+    <div class="scroll-active col3">3</div>
+    <div class="scroll-active col4">4</div>
+</div>
+
+
+
+
+
+</body>
+
+<script>
+
+
+ /* *********************** 스크롤될때 특정 클래스 붙이기 ************************ */
+$(window).scroll(function() {
+    $(".scroll-active").each(function(){
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + ( $(window).height() / 2 );
+
+        if( bottom_of_window > bottom_of_object - ($(window).height()) ){
+            $(this).addClass("scroll-active-animate");
+        }		
+    });
+});
+
+</script>
+
+</html>

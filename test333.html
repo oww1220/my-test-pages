@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="keywords">
+<meta name="description">
+<meta name="robots" content="noindex,follow">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, target-densitydpi=medium-dpi, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="ie-stand">
+<meta name="naver-site-verification" content="19cad6f98d713d73d31e115d86eba26a0fde2e90"/>
+<meta name="google-site-verification" content="RrySAfMd7xZnVVNeRvPdXyO6pJLarHEKTEek6-tb484" />
+<title>신라아이파크인터넷면세점</title>
+<link rel="apple-touch-icon-precomposed" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png">
+<link rel="apple-touch-icon-precomposed" sizes="120X120" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png">
+<link rel="shortcut icon" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/images/app_shillaipark2.png" />
+<link type="text/css" rel="stylesheet" media="all" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/kr/css/common.css?bt=201801041403"/>
+<link rel="stylesheet" type="text/css" media="all" href="https://m.shillaipark.com/estore/_ui/mobile/common/shilladfshome/kr/css/common_dev.css?bt=201801041403" />
+
+<script type="text/javascript" src="https://m.shillaipark.com/estore/_ui/mobile/common/js/jquery-1.11.2.min.js"></script>
+<!--script type="text/javascript" src="https://m.shillaipark.com/estore/_ui/mobile/common/js/jquery-1.11.2.min.js"></script-->
+
+<script src="intersection-observer.js"></script>
+
+<link rel="stylesheet" type="text/css" media="all" href="jquery-ui.css" />
+<script type="text/javascript" src="jquery-ui-Datepicker-1.11.2.js"></script>
+
+
+
+</head>
+
+
+
+
+<body>
+
+    <style>
+        ul, ol, p {margin:0; padding:0;}
+img {border:none; vertical-align:top;}
+h1, h2, h3, h4, h5, h6, address, caption, em, th {font-style:normal; font-weight:normal;}
+ul, ol {list-style:none;}
+.article_pay_simple {margin:5px 0;}
+.article_pay_simple .list_pay_item li {text-align:center;}
+.article_pay_simple .list_pay_item li button {height:45px;}
+.article_pay_simple .list_pay_item li button img {vertical-align:middle;}
+.article_pay_simple .list_pay_item li span {display:block; margin-top:5px; font-size:10px; color:#666;}
+.article_pay_simple .bx_con {margin:20px 0 10px;}
+.article_pay_simple .bx_con .tit {display:block; margin-bottom:10px; font-size:13px;}
+.article_pay_simple .bx_con .txt {line-height:1.4; font-size:11px; color:#666;}
+.article_pay_simple .list_pay_item li .pay_simple_btn_box{height:55px;}
+.article_pay_simple .list_pay_item li button .pay_simple_thm {margin-top:0;}
+.article_pay_simple .toggle_wrap{display:none;}
+.article_pay_simple .toggle_wrap.active{display:block;}
+    </style>
+
+
+    <div class="article_pay_simple">
+        <ul class="list_pay_item cate3">
+            <li>
+                <button data-chk="true" data-info="할인내용1" type="button" class="active pay_simple_btn_box">
+                    <span class="pay_simple_thm">1</span>
+                    <span class="pay_simple_tit">카카오페이</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="pay_simple_btn_box">
+                    <span class="pay_simple_thm">2</span>
+                    <span class="pay_simple_tit">페이코</span>
+                </button>
+            </li>
+            <li>
+                <button data-chk="true" data-info="할인내용2" type="button" class="pay_simple_btn_box">
+                    <span class="pay_simple_thm">3</span>
+                    <span class="pay_simple_tit">티머니 / 캐쉬비</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="pay_simple_btn_box">
+                    <span class="pay_simple_thm">4</span>
+                    <span class="pay_simple_tit">네이버페이</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="pay_simple_btn_box">
+                    <span class="pay_simple_thm">5</span>
+                    <span class="pay_simple_tit">토스</span>
+                </button>
+            </li>
+        </ul>
+        <!-- 간편결제 즉시할인 내용 -->
+        <div class="toggle_wrap">
+            <div class="toggle_tit">
+                <input type="checkbox" id="payInforTog03" />
+                <label for="payInforTog03" class="ty2">할인</label>
+            </div>
+        </div>
+</div>
+    
+
+
+<script>
+$(function(){
+	onload();
+});
+
+function onload(){
+  paySimple();
+}
+
+function paySimple(){
+	$(".article_pay_simple li button").on('click',function(){
+        var $this = $(this),
+            $target = $(".article_pay_simple .toggle_wrap"),
+            chk = $this.attr("data-chk"),
+            info = $this.attr("data-info");
+        chk ? $target.show() : $target.hide();
+        info && $target.find("label").text(info);
+	});
+}
+</script>
+
+</body>
+
+</html>
+
+
