@@ -1877,7 +1877,82 @@
                 보안상으로도 중요하지요~ 물론 packet 을 갈취하면 다 보이지만 ;;;<br />
                 GET(Body가 없음) > 조회 (Paramter 를 조회하는 조건으로 판단)<br />
                 PUT, POST(둘다 Body 가 존재) > 생성하거나 입력 (Data 로 판단)<br />
-                이렇게 되다보니까 parameter 를 조회, payload 를 data 로 판단할 수 있겠네요
+                이렇게 되다보니까 parameter 를 조회, payload 를 data 로 판단할 수 있겠네요<br /><br />
+
+                <table class="explanation_table jquery" style="width:600px;border:1px solid #000">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="40%">         
+                        <col width="40%">                     
+                    </colgroup>
+                    <tbody><tr>
+                        <th>
+                            특징    
+                        </th>
+                        <th>
+                            GET 방식
+                        </th> 
+                        <th>
+                            POST 방식
+                        </th>                 
+                    </tr>
+                    <tr>
+                        <td>
+                            캐시화(cached)
+                        </td>
+                        <td>
+                            캐시될 수 있음.
+                        </td>
+                        <td>
+                            캐시되지 않음.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            브라우저 히스토리
+                        </td>
+                        <td>
+                            히스토리에 쿼리 문자열이 기록됨.
+                        </td>
+                        <td>
+                            히스토리에 기록되지 않음.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            데이터 길이
+                        </td>
+                        <td>
+                            데이터의 길이가 URL 주소의 길이 이내로 제한됨.<br>
+                            (익스플로러에서 URL 주소가 가질 수 있는 최대 길이는 2,083자이며, 이 중에서 순수 경로 길이는 2,048자까지만 허용됨)
+                        </td>
+                        <td>
+                            제한 없음.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            데이터 타입
+                        </td>
+                        <td>
+                            오직 ASCII 문자 타입의 데이터만 전송할 수 있음.
+                        </td>
+                        <td>
+                            제한 없음.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            보안성
+                        </td>
+                        <td>
+                            데이터가 URL 주소에 포함되어 전송되므로, 아무나 볼 수 있어 보안에 매우 취약함.
+                        </td>
+                        <td>
+                            브라우저 히스토리에도 기록되지 않고, 데이터가 따로 전송되므로, GET 방식보다 보안성이 높음.
+                        </td>
+                    </tr>
+                </tbody></table>
             </p>
         </div>
         <div>
