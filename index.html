@@ -426,6 +426,30 @@
             </p>
         </div>
         <div>
+            <h2>typescript 고급타입!</h2>
+            <p>
+                Intersection(type & type) Types<br/><br/>
+                Union(type | type) Types<br/><br/>
+                Nullable(null가능) types - 보통 유니온 타입으로 만들어짐<br/><br/>
+                문자열 리터럴 타입 - type slideSortParam = 'slick' | 'swiper';<br/><br/>
+                인덱스 타입<br/>
+                interface Person {<br/>
+                    name: string;<br/>
+                    age: number;<br/>
+                }<br/>
+                let personProps: keyof Person; // 'name' | 'age'<br/><br/>
+                Mapped type<br/>
+                type Keys = 'option1' | 'option2';<br/>
+                type Flags = { [K in Keys]: boolean };<br/>
+                -->결과<br/>
+                type Flags = {<br/>
+                    option1: boolean;<br/>
+                    option2: boolean;<br/>
+                }<br/>
+
+            </p>
+        </div>
+        <div>
             <h2>c 입력출력버퍼 비우기</h2>
             <p>
                 fflush 함수는 fflush( stdout ) 처럼 출력버퍼를 비우는 용도로만 사용<br />
