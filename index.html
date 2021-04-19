@@ -450,6 +450,23 @@
             </p>
         </div>
         <div>
+            <h2>타입 가드(타입 보호)</h2>
+            <p>
+                스코프 안에서의 타입을 보장하는 런타임 검사를 수행한다는 표현식<br/>
+                <br/>
+                TypeScript는 JavaScript의 instanceof, typeof 연산자를 이해할 수 있습니다. ex) typeof x === 'string', arg instanceof Foo<br/>
+                즉 조건문에 typeof와 instanceof를 사용하면, TypeScript는 해당 조건문 블록 내에서는 해당 변수의 타입이 다르다는 것(=좁혀진 범위의 타입)을 이해한다는 것이죠.<br/>
+                in은 객체 내부에 특정 property가 존재하는지를 확인하는 연산자로 type guard로 활용할 수 있습니다 ex) 'x' in q<br/>
+                리터럴 Type Guard: 리터럴 값의 경우 === / == / !== / != 연산자를 사용해 타입을 구분할 수 있습니다. ex)type TriState = 'yes' | 'no' | 'unknown'; state == 'yes'<br/>
+                null과 undefined- Type Guard:변수 뒤에 !를 붙이는 것입니다. identifier!는 식별자의 타입에서 null과 undefined를 제거합니다.<br/>
+                사용자 정의 Type Guards: ex) <br/>
+                function isFoo(arg: any): arg is Foo {<br/>
+                    return arg.foo !== undefined;<br/>
+                }<br/>
+                isFoo(arg)<br/>
+            </p>
+        </div>
+        <div>
             <h2>c 입력출력버퍼 비우기</h2>
             <p>
                 fflush 함수는 fflush( stdout ) 처럼 출력버퍼를 비우는 용도로만 사용<br />
