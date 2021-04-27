@@ -2588,6 +2588,23 @@
             </p>
         </div>
         <div>
+            <h2>yield*</h2>
+            <p>
+                yield* 표현식은 다른 generator 또는 이터러블(iterable) 객체에 yield를 위임할 때 사용됩니다.<br />
+                function* func1() {<br />
+                    yield 42;<br />
+                }<br />
+                function* func2() {<br />
+                    yield* [1, 2];<br />
+                    yield* func1();<br />
+                }<br />
+                const iterator = func2();<br />
+                console.log(iterator.next().value);// expected output: 1<br />
+                console.log(iterator.next().value);// expected output: 2<br />
+                console.log(iterator.next().value);// expected output: 42
+            </p>
+        </div>
+        <div>
             <h2>Generator Methods</h2>
             <p>
                 <a href="https://github.com/nhnent/fe.javascript/wiki/October-12---October-16,-2015">링크</a> next(value)
