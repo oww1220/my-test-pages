@@ -109,6 +109,38 @@
             </p>
         </div>
         <div>
+            <h2>함수형 프로그래밍을 구현하는 방법</h2>
+            <p>
+            함수형 프로그래밍은 순수 함수(pure function) 를 조합하고 <br />
+            공유 상태(shared state), 변경 가능한 데이터(mutable data) 및 부작용(side-effects) 을 피하여<br /> 
+            소프트웨어를 만드는 프로세스다.<br />
+            함수형 프로그래밍은 명령형(imperative) 이 아닌 선언형(declarative) 이며 <br />
+            <b>애플리케이션의 상태는 순수 함수를 통해 전달</b>된다
+            </p>
+        </div>
+        <div>
+            <h2>리액트를 쓰는이유?</h2>
+            <p>
+                1. 함수형 컴퍼넌트로 app을 구성 할 수 있어서 함수형 프로그램 패러다임에 가까움<br />
+                - 순수함수, 고차함수, 불변성, 함수를 값으로 넘길수 있음, 함수합성 <br />
+                2. 컴퍼넌트가 함수라 데이터를 immutable로 구성해야됨 <br />
+                - 함수형 컴퍼넌트의 props 는 immutable -> update 호출시 새로운 파라미터를 받음<br />
+                - 클래스 컴퍼넌트의 this는 mutable -> update 호출시 this는 공유<br />
+                3. hook를 이용하여 원하는 기능을 함수로 만든 후 <br />
+                필요한 컴퍼넌트에 hook하여 로직의 재사용성이 좋음<br />
+                4. 함수형 컴퍼넌트 기반이라 정적 타이핑 기능의 js superset 인 typescript 적용하기가 쉬움<br />
+                5. flux패턴을 기반으로 하는 redux를 사용하여 전역 상태관리<br />
+                6. redux-saga 의 generator를 이용하여 비동기 로직을 동시성 프로그램으로 만들수 있음 <br />
+                7. 단방향 데이터 바인딩(Javascript -> HTML로 데이터 바인딩만 가능)으로 데이터 추적 및
+                디버깅이 쉬움<br />
+                8. 단위테스트가 용이<br />
+                9. next.js이용하여  SSR(Server Side Rendering), SSG(Static Site Generation),
+                CSR(Client Side Rendering) 구성<br />
+                10. rest api 및 GraphQL api 형태선택 사용가능
+
+            </p>
+        </div>
+        <div>
             <h2>C프로시저와 함수의 차이</h2>
             <p>
                 함수(function) : 특정 계산을 수행하며 리턴값이 있다. 반드시 수식 내에서만 사용할 수 있으며 함수 단독으로 문장을 구성할 수 없다.<br />
