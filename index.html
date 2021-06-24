@@ -5447,6 +5447,28 @@
 
 
 <script>
+
+    const testF = ()=>{
+        // 클로저 환경은 메모리힙에 저장
+        const aaa = 801220; // 콜스택에 저장
+        return function bbbb() {
+            // 클로저 환경은 메모리힙에 저장
+            const bbb = 'text!!!!'; // 메모리힙에 저장
+            console.log(111111,aaa);
+            return function(){
+                console.log(111111,aaa);
+                console.log(222, bbb);
+            }
+        }
+    };
+
+    const ffff = testF();
+    console.dir(ffff);
+
+    const ffff2 = ffff();
+    console.dir(ffff2);
+
+    /*
     function setFontSize() {
         var doc = document.documentElement,
 			fontSizeVal = (parseFloat((doc.clientWidth / 320 * 62.5) * 100) / 100);
@@ -5454,107 +5476,10 @@
 
 		doc.style.fontSize = fontSizeVal + '%';
     }
-
-    /*
     $(window).resize(function(){
         setFontSize();
     }).resize();
     */
-
-    Promise.resolve({
-        then: function (onFulfill, onReject) {
-            setTimeout(function () {
-                console.log(1)
-                onFulfill(1);
-            }, 1000);
-        }
-    }).then(function (e) {
-        console.log("e:" + e)
-        return new Promise(function (resolve, reject) {
-            setTimeout(function () {
-                console.log(2)
-                resolve();
-            }, 1000);
-        });
-
-    }).then(function (z) {
-        console.log(3)
-        console.log("z:" + z)
-    });
-
-    /*
-        const carousel = document.getElementById('carousel');
-        let isLeaving = false;
-        let observer = new IntersectionObserver(function (entries, self) {
-            console.log(entries, self);
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    isLeaving = true;
-                    console.log("show")
-                    //entry.target.startCarousel();
-                } else if (isLeaving) {
-                    isLeaving = false;
-                    console.log("hide")
-                    //entry.target.stopCarousel();
-                }
-            });
-        });
-        observer.observe(carousel);
-    */
-
-
-    ;
-    (function ($) {
-        function A(name, otp) {
-            var de = {
-                a: "as",
-                b: "bs",
-                c: "c"
-            }
-            var option = $.extend({}, de, otp);
-            this.name = name;
-            this.otp = option;
-        }
-        A.prototype.me = function () {}
-
-        function B(name, age, otp, el) {
-            A.apply(this, [name, otp])
-            this.age = age;
-            this.init(el);
-        }
-        B.prototype = Object.create(A.prototype);
-        B.prototype.constructor = B;
-        B.prototype.me = function () {
-            return this.otp.a;
-        }
-        B.prototype.init = function (el) {
-            console.log("init");
-            this.el = $(el);
-            this.event();
-        }
-        B.prototype.event = function () {
-            this.el.on("click", function (e) {
-                $(this).addClass("on");
-            });
-        }
-
-        $.fn.tabs = function (name, age, options) {
-            this.each(function () {
-                return new B(name, age, options, this);
-                //return new TabMenu(this, options).init();
-            });
-        };
-    })(jQuery);
-    //var s=new B("qw",13,{a:"a",b:"b"},".int");
-
-    //var s=new A("as");
-    //console.log(s);
-
-
-    $(".int").tabs("qw", 13, {
-        a: "a",
-        b: "b"
-    });
 </script>
 
 </html>
