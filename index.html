@@ -4472,6 +4472,18 @@
             </p>
         </div>
         <div>
+            <h2>바이트 코드(bytecode)</h2>
+            <p>
+                - 고급 언어로 작성된 소스 코드를 가상머신이 이해할 수 있는 중간 코드로 컴파일한 것<br />
+                가상머신은 이 바이트코드를 각각의 하드웨어 아키텍처에 맞는 기계어로 다시 컴파일한다. <br />
+                어셈블리어에 가까운 형태를 띄고 있으며 어떨 때는 가상머신용 오브젝트 코드까지 바이트코드라고 부르기도 한다.<br />
+                <br />
+                컴파일러에 의해 변환된 명령어 코드가 1바이트라서 바이트 코드라고 부른다고 합니다. <br />
+                어떤 플렛폼에도 종속되지 않고 실행될 수 있는 가상 머신용 코드라고 보시면 됩니다.  <br />
+                바이트 코드는 다시 실시간 번역기 또는 저스트 인 타임(just-in-time, JIT) 컴파일러에 의해 바이너리 코드로 변환됩니다.<br />
+            </p>
+        </div>
+        <div>
             <h2>바이트 코드와 바이너리 코드는 무엇이 다른가? </h2>
             <p>
                 바이너리 코드란?<br />
@@ -5490,6 +5502,29 @@
 
     const ffff2 = ffff();
     console.dir(ffff2);
+
+
+    var apple = 'global apple';
+    var banana = 'global banana';
+
+    {
+        let banana = 'block banana';
+        var grape = 'global grape';
+        let orange = 'block orange';
+        console.log(apple);
+        console.log(banana);
+    }
+    console.log(banana);
+    console.log(grape);
+    //console.log(orange); // error!
+
+    let apples = '사과';
+    {
+        console.log(apples);
+        //let apples = 'dddd'; // error!
+    }
+
+
 
     /*
     function setFontSize() {
