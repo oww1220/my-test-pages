@@ -5568,6 +5568,62 @@
         //let apples = 'dddd'; // error!
     }
 
+    //디바운스 
+    const debounce = (f, interval)=> {
+        let timer = null;
+        return (...args) => {
+            clearTimeout(timer);
+            return new Promise((resolve) => {
+                timer = setTimeout(
+                    () => resolve(f(...args)), //이함수 리턴값이 프람미스면 리턴값이 이함수 리턴값으로됨
+                    //예시 Promise.resolve(Promise.resolve(1)) 같은원리로 동작
+                    interval,
+                );
+            });
+        };
+    };
+
+    //쓰로쓸링
+    const throttling = (f, interval)=> {
+        let timer = null;
+        return (...args) => {
+            return new Promise((resolve) => {
+                if (!timer) {
+                    timer = setTimeout(
+                        () => {
+                            resolve(f(...args))
+                            timer = null;
+                        },
+                        interval,
+                    );
+                }
+            });
+        };
+    };
+
+    /*
+    const TestPromise = ()=> new Promise((resolve, reject)=>{
+        $('h2').on('click', ()=>{
+            console.log('test!!');
+            resolve(true);
+        });
+    });
+
+    const TestPromise2 = (timeout)=> new Promise((resolve, reject)=> {
+        setTimeout(() => {
+            resolve(true);
+        }, timeout);
+    });
+
+    const DTestPromise2 = debounce(TestPromise2, 1000);
+    const TTestPromise2 = throttling(TestPromise2, 2000);
+
+    $('h2').on('click', ()=>{
+        console.log('test!!');
+        //DTestPromise2(1000).then(console.log);
+        TTestPromise2(1000).then(console.log);
+    });
+    */
 
 
     /*
