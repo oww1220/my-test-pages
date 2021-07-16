@@ -1,0 +1,79 @@
+
+
+docker pull oww1220/asiana-ts-01:0.1.0
+docker pull oww1220/asiana-data
+
+find db.json
+
+<컨테이너 내부 파일리스트>
+docker container exec asiana-data ls
+docker container competent_keldysh asiana-data ls
+
+<컨테이너 내부 in,out>
+docker exec -ti competent_keldysh bash
+exit
+
+<컨테이너 파일추출>
+docker container cp asiana-data:/data/db.json ./
+docker container cp competent_keldysh:/data/db.json ./
+
+docker container cp kind_chatelet:/data/db.json ./
+
+<컨테이너에 파일 넣기>
+docker cp db.json asiana-data:/data/db.json
+
+docker cp db.json kind_chatelet:/data/db.json
+
+<이미지 명령어>
+docker image ls
+docker image rmi 537527661905
+docker image rm docker-reactjs
+docker image prune
+
+<컨테이너 명령어>
+docker rename competent_keldysh asiana-data
+docker ps -a
+docker container ls
+docker container rm asiana4
+docker stop asiana4
+docker start 55294a0673e6
+
+<빌드 명령어-이미지 생성>
+docker build -t my-ssr-app:0.2.0 .
+docker build -t asiana-ts-02:1.9.0 .
+docker build -t asiana-data .
+docker build -t payment-fraud .
+
+<런 명령어-이미지기반 컨테이너 생성>
+docker run -p 83:80 asiana-ts-02
+docker run -p 5001:80 asiana-data
+<--rm키워드는 stop시 사라짐>
+docker run -p 83:80 --rm --name asiana-ts-01 asiana-ts-01:0.1.0
+docker run -i -t --rm oww1220/cheers2019
+
+docker run -p 83:80 oww1220/asiana-ts-02:1.9.0
+docker run -p 5001:80 oww1220/asiana-data
+
+<컨테이너 이름변경>
+docker rename jolly_heisenberg asiana-data
+
+<도커허브>
+docker login ;
+docker push oww1220/asiana-data:asiana-data
+
+<도커 네트워크>
+docker network ls
+docker network inspect bridge
+
+
+docker pull oww1220/asiana-ts-02:1.9.0
+docker run -p 83:80 oww1220/asiana-ts-02:1.9.0
+
+
+
+docker build -t my-ssr-app:0.2.0 .
+docker run -p 83:3006 --name my-ssr-app my-ssr-app:0.2.0 
+
+
+
+

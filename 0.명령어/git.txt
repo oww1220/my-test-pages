@@ -1,0 +1,139 @@
+on<초기설정>
+git config --list
+git config --global user.name "이동걸"
+git config --global user.email "oww@mz.co.kr"
+
+<클론>
+http://72.100.112.85/Bonobo.Git.Server/project.git
+null
+git clone http://72.100.112.85/Bonobo.Git.Server/hdc.git
+
+git clone https://github.com/oww1220/Q-TAS_Project.git
+
+<되돌릴 커밋> 
+git revert  
+git revert --hard 1991d6b75d57622fa9a20b266cfb1fa37cebc168
+
+<해드 로그>
+git reflog
+git reset 0d59978415f795e45e913e5cb7f6af042dae71f9
+git reset --hard HEAD@{36}
+git reset --soft 8dd00d904fd97a514c62dcbed0ab06c918b808d8
+git reset --hard 8dd00d904fd97a514c62dcbed0ab06c918b808d8
+git reset --hard ORIG_HEAD
+
+git reset --merge ORIG_HEAD
+
+
+<가지이동>
+git checkout -b 테스트가지
+git checkout 8695625733462e0e03204feec1da56aa6e7ec76c
+
+<가지 병합>
+git merge 이동걸/적립금개선
+
+
+<가지 생성 삭제>
+git branch 브랜치02 4993f3866f5ef02992c8a14e60a70b6d44db0c0a
+git branch -D 브랜치01
+git push origin --delete 브랜치01
+git push origin 브랜치01
+원격 저장소의 branch 리스트를 확인하는 방법이 있다.
+git branch -r 옵션을 주면 원격 저장소의 branch 리스트를 볼 수 있고, 
+git branch -a 옵션을 주면 로컬, 원격 모든 저장소의 branch 리스트를 볼 수 있다.
+원격 저장소의 branch 를 가져오고 싶다면, 
+git checkout -t origin/브랜치01 처럼 하면 된다.
+
+git cherry-pick 4fa9623cd7b0cb3203afd2cc4129ccc2f9e930c6
+
+<재배치>
+git rebase 로그가지
+git rebase master
+git rebase 51eb4462309eb567b41841f06d4b19bb24305646
+git rebase -i 090adfb1d61a95d71d4376cd27d8501f67d47e21
+git rebase -i 브랜치01
+git rebase --continue
+git rebase --skip
+git rebase --abort
+
+<머지 방식>
+git checkout test
+git pull 
+git checkout master
+git pull
+git merge --no-ff --no-commit 브랜치01
+or
+git checkout master
+
+git pull origin master
+git pull origin 이동걸/적립금개선
+git pull origin 이동걸/출국정보개선
+
+git pull origin 정진호/DEV
+
+
+git reset --merge ORIG_HEAD
+(이전 머지 돌리기)
+
+git merge --no-ff 이동걸/적립금개선
+
+
+git commit
+git push origin master
+
+<리베이스 방식>
+git checkout master
+git pull
+git checkout test
+git pull
+git rebase -i master
+git checkout master
+git merge 브랜치01
+
+<리베이스 피해야할 방식>
+git checkout master
+git rebase -i test
+
+git remote add origin "/e/workspace/project.git"
+
+
+git rm -f none/\*
+git rm --cached none/\*
+
+git status
+git add .
+git rm [파일명]
+
+
+<커밋>
+git commit --amend
+git commit -m [브랜치01-02]
+
+
+<깃 내부소스 보기>
+git cat-file -p <헤쉬값40자리>(소스)
+git cat-file -t <헤쉬값40자리>(타입)
+
+
+git log
+
+
+git pull origin master
+git push origin master
+git push --force
+
+git diff
+
+
+<풀리퀘시 자주사용>
+git branch MZ-dev-QA 
+git branch -D MZ-dev-QA
+git push origin --delete MZ-dev-QA
+MZ-dev-QA
+git cherry-pick e145217410e5db80ecf1f7821d8050dfbb605ea5
+git pull origin master
+git pull upstream master
+git remote -v
+git remote add upstream https://egh.riotgames.com/kr-publishing/payment-fraud.git
+
+
