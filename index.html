@@ -5690,6 +5690,20 @@
         setFontSize();
     }).resize();
     */
+
+    /*
+    $(function(){
+        var hash = location.hash;
+        function hashChangeClass(hash) {
+            if(hash ==='') return;
+            var sliceStr = Number(hash.charAt(hash.length-1))-1;
+            //console.log(hash, sliceStr);
+            $('.tab_area.pc_type02 .swiper-wrapper').find('li').eq(sliceStr).addClass('on').siblings().removeClass();
+            $('.tab_area.pc_type02 .tab_container').find(hash).addClass('on').siblings().removeClass('on');
+        }
+        hashChangeClass(hash);
+    });
+    */
 </script>
 
 </html>
